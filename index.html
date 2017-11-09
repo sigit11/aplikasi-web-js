@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>Aplikasi Web Sederhana</title>
+        <link rel="stylesheet" href="files/bootstrap.min.css">
+        <!-- Custom Fonts -->
+        <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    </head>
+    <body onload="muatDaftarData();">     
+        <div class="col-md-8 col-md-offset-2" ng-controller="listContactCtrl">
+            <div class="page-header">
+                <h1>
+                    Aplikasi Web Sederhana
+                </h1>
+                <div id="time"></div> 
+                <a href="javascript:alert('Wih! hebat bukan?')">Klik disini</a>
+                <button onclick="alert('Ok Terima kasih!')">Klik donk!</button>
+                <div class="form-group">
+                    <div class='input-group date' id='datetimepicker1'>
+                        <input type='text' class="form-control" />
+                        <span class="input-group-addon">
+                            <span class="fa fa-calendar"></span>
+                        </span>
+                    </div>
+                </div>
+                
+                <ul class="nav nav-pills">
+                  <li><a id="nav-list-data" href="javascript:void(0);" onclick="gantiMenu('list-data');">Daftar Data</a></li>
+                  <li><a id="nav-tambah-data" href="javascript:void(0);" onclick="gantiMenu('tambah-data');">Tambah Data</a></li>
+                </ul>
+            </div>
+
+            <div id="tambah-data" class="well" style="display:none;">
+                <form id="form-data">
+                    <div id="name-group" class="form-group">
+                        <label>Nama:</label> 
+                        <input type="text" class="form-control" id="nama" name="nama" placeholder="contoh: Nyekrip Web" /><br/>
+                    </div>
+                    <div id="alamat-group" class="form-group">
+                        <label>Alamat:</label> 
+                        <input type="text" class="form-control" id="alamat" name="alamat" placeholder="contoh: Indonesia" /><br/>
+                    </div>
+                    <div id="ket-group" class="form-group">
+                        <label>Keterangan:</label> 
+                        <textarea class="form-control" id="ket" name="ket" placeholder="contoh: Web Tutorial Indonesia"></textarea><br/>
+                    </div>
+                    <input type="button" value="Simpan" onclick="simpanData();" class="btn btn-success btn-small"/>
+                    <input type="reset" value="Reset" onclick="" class="btn btn-warning btn-small"/>
+                </form>
+            </div>
+            <div id="edit-data" class="well" style="display:none;">
+                <form id="eform-data">
+                
+                    <div id="name-group" class="form-group" style="display:none;">
+                        <label>id data:</label> 
+                        <input type="text" class="form-control" id="eid_data" name="nama" placeholder="" /><br/>
+                    </div>
+                
+                    <div id="name-group" class="form-group">
+                        <label>Nama:</label> 
+                        <input type="text" class="form-control" id="enama" name="nama" placeholder="contoh: Nyekrip Web" /><br/>
+                    </div>
+                    <div id="alamat-group" class="form-group">
+                        <label>Alamat:</label> 
+                        <input type="text" class="form-control" id="ealamat" name="alamat" placeholder="contoh: Indonesia" /><br/>
+                    </div>
+                    <div id="ket-group" class="form-group">
+                        <label>Keterangan:</label> 
+                        <textarea class="form-control" id="eket" name="ket" placeholder="contoh: Web Tutorial Indonesia"></textarea><br/>
+                    </div>
+                    <input type="button" value="Simpan" onclick="simpanEditData();" class="btn btn-success btn-small"/>
+                    <input type="reset" value="Reset" onclick="" class="btn btn-warning btn-small"/>
+                    <input type="button" value="Cancel" onclick="gantiMenu('list-data');" class="btn btn-warning btn-small"/>
+                </form>
+            </div>
+            <div id="list-data" class="well">
+                Tidak ada data...
+            </div>
+        </div>
+        <script src="files/jquery.min.js"></script>
+        <script src="files/bootstrap.min.js"></script> 
+        <script src="files/custom.js"></script> 
+        <script type="text/javascript">
+          javascript:alert("Nah! ini Javascript")
+        </script>  
+    </body>
+</html>
