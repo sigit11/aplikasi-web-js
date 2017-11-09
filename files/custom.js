@@ -3,6 +3,18 @@ $('#datetimepicker').data("DateTimePicker").FUNCTION()
 $(function () {
     $('#datetimepicker1').datetimepicker();
 });
+// login
+var attempt = 3; //Variable to count number of attempts
+    ............
+    attempt --; //Decrementing by one
+    .............
+document.getElementById("username").disabled = true;
+document.getElementById("password").disabled = true;
+document.getElementById("submit").disabled = true;
+return false;
+}
+}
+}
 // waktu
 function showTime() {
     var a_p = "";
@@ -24,7 +36,7 @@ function showTime() {
     curr_hour = checkTime(curr_hour);
     curr_minute = checkTime(curr_minute);
     curr_second = checkTime(curr_second);
-    document.getElementById('time').innerHTML=curr_hour + ":" + curr_minute + ":" + curr_second + " " + a_p;
+    document.getElementById('#time').innerHTML=curr_hour + ":" + curr_minute + ":" + curr_second + " " + a_p;
 }
  
 function checkTime(i) {

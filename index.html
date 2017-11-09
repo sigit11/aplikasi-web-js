@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="files/bootstrap.min.css">
         <!-- Custom Fonts -->
         <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="files/style.css">
     </head>
     <body onload="muatDaftarData();">     
         <div class="col-md-8 col-md-offset-2" ng-controller="listContactCtrl">
@@ -16,7 +17,7 @@
                 <h1>
                     Aplikasi Web Sederhana
                 </h1>
-                <div id="time"></div> 
+                
                 <a href="javascript:alert('Wih! hebat bukan?')">Klik disini</a>
                 <button onclick="alert('Ok Terima kasih!')">Klik donk!</button>
                 <div class="form-group">
@@ -27,7 +28,7 @@
                         </span>
                     </div>
                 </div>
-                
+                <div id="time"></div> 
                 <ul class="nav nav-pills">
                   <li><a id="nav-list-data" href="javascript:void(0);" onclick="gantiMenu('list-data');">Daftar Data</a></li>
                   <li><a id="nav-tambah-data" href="javascript:void(0);" onclick="gantiMenu('tambah-data');">Tambah Data</a></li>
@@ -80,6 +81,16 @@
             <div id="list-data" class="well">
                 Tidak ada data...
             </div>
+            <div class="main">
+            <h2>Javascript Login Form Validation</h2>
+            <form id="form_id" method="post" name="myform">
+            <label>User Name :</label>
+            <input type="text" name="username" id="username"/>
+            <label>Password :</label>
+            <input type="password" name="password" id="password"/>
+            <input type="button" value="Login" id="submit" onclick="validate()"/>
+            </form>
+            <span><b class="note">Note : </b>For this demo use following username and password. <br/><b class="valid">User Name : Formget<br/>Password : formget#123</b></span>
         </div>
         <script src="files/jquery.min.js"></script>
         <script src="files/bootstrap.min.js"></script> 
